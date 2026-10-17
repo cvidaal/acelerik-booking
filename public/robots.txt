@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://booking.acelerik.com/sitemap.xml
