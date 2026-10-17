@@ -10,7 +10,7 @@ El software de reservas en sí está en `../acelerik-demo-cumple` (React + backe
 
 ## Stack
 
-React 18 + TypeScript + Vite 5, Tailwind + shadcn/ui (`src/components/ui/`, alias `@/` → `src/`), React Router 6. Formulario de contacto con Formspree (mismo endpoint que la web de Acelerik; los envíos llevan `_subject` y `source` para distinguirlos). Sin backend, sin variables de entorno, sin analítica ni cookies. Hosting previsto: **Cloudflare Pages** (`public/_redirects`).
+React 18 + TypeScript + Vite 5, Tailwind + shadcn/ui (`src/components/ui/`, alias `@/` → `src/`), React Router 6. Formulario de contacto con Formspree (mismo endpoint que la web de Acelerik; los envíos llevan `_subject` y `source` para distinguirlos). Sin backend, sin variables de entorno, sin analítica ni cookies. Hosting: **Cloudflare Workers** con assets estáticos (`wrangler.jsonc`, modo SPA), desplegado desde GitHub en cada push a `main`. `public/_redirects` solo redirige `/parques`.
 
 ## Comandos
 
@@ -34,7 +34,7 @@ No hay tests automatizados.
 
 ## Convenciones
 
-- Una ruta nueva: `App.tsx` (encima de `*`), `public/_redirects` y `public/sitemap.xml`.
+- Una ruta nueva: `App.tsx` (encima de `*`) y `public/sitemap.xml`. El modo SPA de `wrangler.jsonc` ya sirve `index.html` en cualquier ruta.
 - Los metadatos de `index.html` y `PageMeta` deben coincidir.
 - Ningún servicio de terceros puede cargarse sin acción del usuario (YouTube solo al pulsar). Un servicio nuevo implica revisar privacidad y cookies.
 - WhatsApp es el canal comercial; un bot de WhatsApp es una integración adicional con presupuesto aparte.

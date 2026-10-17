@@ -8,4 +8,4 @@ npm run dev
 npm run build
 ```
 
-Despliegue en Cloudflare Pages: comando de build `npm run build`, directorio de salida `dist`.
+Despliegue en Cloudflare Workers (Workers Builds desde GitHub): build `npm run build`, deploy `npx wrangler deploy` (configuración en `wrangler.jsonc`).

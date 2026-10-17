@@ -1,6 +1,2 @@
-# Cloudflare Pages: las rutas de la SPA sirven index.html (con public/404.html no hay fallback automático).
-/parques      /             301
-/aviso-legal  /index.html   200
-/privacidad   /index.html   200
-/cookies      /index.html   200
-/terminos     /index.html   200
+# Enlaces antiguos de www.acelerik.com/parques.
+/parques  /  301
